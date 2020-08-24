@@ -10,7 +10,7 @@ import SwiftUI
 
 class WeatherAPI {
     func loadData(completion: @escaping (Model) -> ()) {
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=c256e12a788194c4496bd8406b26efd3") else { return }
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=oslo&units=metric&APPID=c256e12a788194c4496bd8406b26efd3") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             do {
