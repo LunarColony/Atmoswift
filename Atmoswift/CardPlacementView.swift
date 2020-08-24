@@ -76,17 +76,3 @@ struct DataToPresentInCard: View {
         }
     }
 }
-
-
-extension Double {
-    func getDateStringFromUTC() -> String {
-        let date = Date(timeIntervalSince1970: self)
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_GB")
-        dateFormatter.dateStyle = .medium
-        dateFormatter.dateFormat = "hh:MM"
-
-        return dateFormatter.string(from: date)
-    }
-}
