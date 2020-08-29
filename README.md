@@ -1,5 +1,5 @@
 # Atmoswift
-☀️ A simple weather app built using SwiftUI. Data courtesy of OpenWeatherMap 🌧
+☀️ A simple weather app built using SwiftUI. Data courtesy of OpenWeatherMp 🌧
 # Developer notes
 Currently trying to add a search bar feature so users can search the city they want.
 
