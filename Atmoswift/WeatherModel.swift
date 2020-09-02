@@ -36,9 +36,6 @@ struct Wind: Codable {
     var deg: Int
 }
 
-
-
-
 struct Sys: Codable {
     var country: String
     var sunrise: Int
