@@ -10,11 +10,12 @@ import SwiftUI
 
 class WeatherAPI {
     func loadData(completion: @escaping (Model) -> ()) {
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=oslo&units=metric&APPID=c256e12a788194c4496bd8406b26efd3") else { return }
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=london&units=metric&APPID=c256e12a788194c4496bd8406b26efd3") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             do {
                 let apiData = try JSONDecoder().decode(Model.self, from: data!)
+                
                 
                 DispatchQueue.main.async {
                     completion(apiData)
@@ -26,6 +27,26 @@ class WeatherAPI {
         }.resume()
     }
 }
+
+
+class DailyWeatherAPI: ObservableObject {
+    func loadDailyData(completion: @escaping (DailyWeatherModel) -> ()) {
+        guard let url = URL(string: "http://api.openweathermap.org/data/2.5/forecast?q=London,uk&units=metric&appid=c256e12a788194c4496bd8406b26efd3") else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            do {
+                var dailyApiData = try JSONDecoder().decode(DailyWeatherModel.self, from: data!)
+                DispatchQueue.main.async {
+                    completion(dailyApiData)
+                }
+                
+            } catch  {
+                print(error.localizedDescription)
+            }
+        }.resume()
+    }
+}
+
 
 extension Double {
     func getDateStringFromUTC() -> String {
@@ -39,3 +60,6 @@ extension Double {
         return dateFormatter.string(from: date)
     }
 }
+
+
+

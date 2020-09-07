@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E93549B724F5408200AF9BD5 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93549B624F5408200AF9BD5 /* SearchBarView.swift */; };
+		E93549B924F54BAD00AF9BD5 /* DailyWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93549B824F54BAD00AF9BD5 /* DailyWeatherModel.swift */; };
+		E93549BB24F5507A00AF9BD5 /* DailyWeatherCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93549BA24F5507A00AF9BD5 /* DailyWeatherCardView.swift */; };
 		E946501524F428CB0077D231 /* AtmoswiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946501424F428CB0077D231 /* AtmoswiftApp.swift */; };
 		E946501724F428CB0077D231 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946501624F428CB0077D231 /* ContentView.swift */; };
 		E946501924F428CC0077D231 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E946501824F428CC0077D231 /* Assets.xcassets */; };
@@ -15,9 +18,14 @@
 		E946502624F428EB0077D231 /* WeatherAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946502524F428EB0077D231 /* WeatherAPIController.swift */; };
 		E946502824F42A210077D231 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946502724F42A210077D231 /* WeatherView.swift */; };
 		E946502B24F42CE20077D231 /* CardPlacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946502A24F42CE20077D231 /* CardPlacementView.swift */; };
+		E9640816250674050043AF61 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E9640815250674050043AF61 /* SwiftUICharts */; };
+		E964081825068D280043AF61 /* GraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E964081725068D280043AF61 /* GraphData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E93549B624F5408200AF9BD5 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		E93549B824F54BAD00AF9BD5 /* DailyWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherModel.swift; sourceTree = "<group>"; };
+		E93549BA24F5507A00AF9BD5 /* DailyWeatherCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherCardView.swift; sourceTree = "<group>"; };
 		E946501124F428CB0077D231 /* Atmoswift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atmoswift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E946501424F428CB0077D231 /* AtmoswiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmoswiftApp.swift; sourceTree = "<group>"; };
 		E946501624F428CB0077D231 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +36,7 @@
 		E946502524F428EB0077D231 /* WeatherAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIController.swift; sourceTree = "<group>"; };
 		E946502724F42A210077D231 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		E946502A24F42CE20077D231 /* CardPlacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlacementView.swift; sourceTree = "<group>"; };
+		E964081725068D280043AF61 /* GraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9640816250674050043AF61 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +54,8 @@
 		E946500824F428CB0077D231 = {
 			isa = PBXGroup;
 			children = (
+				E93549BA24F5507A00AF9BD5 /* DailyWeatherCardView.swift */,
+				E964081725068D280043AF61 /* GraphData.swift */,
 				E946501324F428CB0077D231 /* Atmoswift */,
 				E946501224F428CB0077D231 /* Products */,
 			);
@@ -64,7 +76,9 @@
 				E946501624F428CB0077D231 /* ContentView.swift */,
 				E946502324F428DF0077D231 /* WeatherModel.swift */,
 				E946502724F42A210077D231 /* WeatherView.swift */,
+				E93549B624F5408200AF9BD5 /* SearchBarView.swift */,
 				E946502524F428EB0077D231 /* WeatherAPIController.swift */,
+				E93549B824F54BAD00AF9BD5 /* DailyWeatherModel.swift */,
 				E946502A24F42CE20077D231 /* CardPlacementView.swift */,
 				E946501824F428CC0077D231 /* Assets.xcassets */,
 				E946501D24F428CC0077D231 /* Info.plist */,
@@ -97,6 +111,9 @@
 			dependencies = (
 			);
 			name = Atmoswift;
+			packageProductDependencies = (
+				E9640815250674050043AF61 /* SwiftUICharts */,
+			);
 			productName = Atmoswift;
 			productReference = E946501124F428CB0077D231 /* Atmoswift.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +141,9 @@
 				Base,
 			);
 			mainGroup = E946500824F428CB0077D231;
+			packageReferences = (
+				E9640814250674050043AF61 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = E946501224F428CB0077D231 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,8 +173,12 @@
 				E946502824F42A210077D231 /* WeatherView.swift in Sources */,
 				E946501724F428CB0077D231 /* ContentView.swift in Sources */,
 				E946502424F428DF0077D231 /* WeatherModel.swift in Sources */,
+				E93549B724F5408200AF9BD5 /* SearchBarView.swift in Sources */,
 				E946501524F428CB0077D231 /* AtmoswiftApp.swift in Sources */,
 				E946502B24F42CE20077D231 /* CardPlacementView.swift in Sources */,
+				E93549BB24F5507A00AF9BD5 /* DailyWeatherCardView.swift in Sources */,
+				E93549B924F54BAD00AF9BD5 /* DailyWeatherModel.swift in Sources */,
+				E964081825068D280043AF61 /* GraphData.swift in Sources */,
 				E946502624F428EB0077D231 /* WeatherAPIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9640814250674050043AF61 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9640815250674050043AF61 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9640814250674050043AF61 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E946500924F428CB0077D231 /* Project object */;
 }

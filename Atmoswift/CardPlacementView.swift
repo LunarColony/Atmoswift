@@ -59,7 +59,7 @@ struct DataToPresentInCard: View {
                 .resizable()
                 .frame(width: 35, height: 30)
                 .foregroundColor(.yellow)
-            Text("\((Double(self.weatherData?.sys.sunrise ?? 0) ).getDateStringFromUTC())")
+            Text("\((Double(self.weatherData?.sys.sunrise ?? 0)).getDateStringFromUTC())")
             Spacer()
             Image(systemName: "sunset.fill")
                 .resizable()

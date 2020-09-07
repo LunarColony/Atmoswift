@@ -36,11 +36,12 @@ struct Wind: Codable {
     var deg: Int
 }
 
-
-
-
 struct Sys: Codable {
     var country: String
     var sunrise: Int
     var sunset: Int
+}
+
+struct UserInput: Codable {
+    var userCityInput: String
 }
